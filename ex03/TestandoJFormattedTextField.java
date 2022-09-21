@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.text.MaskFormatter;
 
+
 public class TestandoJFormattedTextField extends JFrame {
     private static final long serialVersionUID = 1L;
 public static void main(String[] args) {
@@ -18,7 +19,9 @@ private void testaJFormattedTextField() {
     Container janela = getContentPane();
     setLayout(null);
     //Define os rótulos dos botões
-    JLabel labelCep = new JLabel("CEP: ");
+    
+
+    JLabel labelCep = new JLabel("<html> <font color='red'>Cep:</font></html>"); // podemos usar propriedades  do html para mudar cor mas não é uma boa pratica
     JLabel labelTel = new JLabel("Telefone: ");
     JLabel labelCpf = new JLabel("CPF: ");
     JLabel labelData = new JLabel("Data: ");
