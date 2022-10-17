@@ -8,7 +8,24 @@ public class Pedido {
     private String numPedido;
     private Date data;
     private Cliente cliente;
+
     private List <Pizza> listaPizza = new ArrayList <Pizza>();
+    
+    
+    public List<Pizza> getListaPizza() {
+        return this.listaPizza;
+    }
+    public void setListaPizza(List<Pizza> listaPizza) {
+        this.listaPizza = listaPizza;
+    }
+
+
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
     public Pedido(String numPedido, Date data) {
         this.numPedido = numPedido;
@@ -41,7 +58,7 @@ public class Pedido {
         return valorTotalPedido ; 
     }
 
-    
-
-}
+    public String imprimePedido (){
+        return ("Pedido: " +getNumPedido()+ "\n Cliente: "+getCliente().getNome() )+ "\nQuantidade de Pizzas: " + getListaPizza().size() + "\n Valor Total do Pedido:" + valorPedido();
+        }
 
